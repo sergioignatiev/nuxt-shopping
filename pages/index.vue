@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <div class="flex flex-wrap gap-10 justify-center">
-    <TheCard image="/headphones.png"/>
+  <div class="flex flex-wrap gap-7">
+     <TheCard image="/headphones.png"/>
     <TheCard image="/headphones-white.png"/>
     <TheCard image="/headphones-logitech.png"/>
     <TheCard image="/headphones-white.png"/>
@@ -16,13 +15,10 @@
     <TheCard image="/headphones.png"/>
     <TheCard image="/headphones-white.png"/>
     <TheCard image="/headphones-logitech.png"/>
-    <TheCard image="/headphones-white.
+    <TheCard image="/headphones-white.png"/>
 
-    </div>
-    <h1 class="text-[#eec353]  text-[40px] font-extrabold ">index page</h1>
-    <p>just a simple text</p>
-   
-  </div>
+   </div>
+ 
 </template>
 
 <script  setup>
