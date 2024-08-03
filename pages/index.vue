@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-7">
+  <div class="flex flex-wrap gap-7 justify-center">
      <TheCard image="/headphones.png"/>
     <TheCard image="/headphones-white.png"/>
     <TheCard image="/headphones-logitech.png"/>
