@@ -3,7 +3,7 @@
   <NuxtLayout :name="layout">
     <div class="bg-[#505050] px-12 w-[100%] py-5 rounded-md">
      
-<TheButton>SLOT</TheButton>
+
 </div>
   <div>
    
