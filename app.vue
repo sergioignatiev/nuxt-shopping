@@ -29,6 +29,9 @@ const layout=computed(()=>{
 })
 </script>
 <style>
+*{
+  overflow-x: hidden;
+}
 .router-link-exact-active{
 opacity: 0.7;
 }

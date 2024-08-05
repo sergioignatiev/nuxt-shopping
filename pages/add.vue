@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="h-[100vh]">
+    {{ products.length }}
    <form @submit.prevent="pushToProducts">
-<input class="bg-blue-600" type="text" v-model="title">
+<input class="bg-blue-600" type="text" v-model="title" placeholder="" required>
 
-<input type="text" v-model="image">
+<input class="bg-green-500" type="text" v-model="image"placeholder="" required>
 <button>SUBMIT</button>
    </form> 
   </div>
@@ -11,15 +12,18 @@
 
 <script  setup>
 import { useCounterStore} from '~/stores/product';
+import { storeToRefs } from 'pinia';
 const count=useCounterStore()
-
+const {products}=storeToRefs(count)
 const id=computed(()=>{
-    return count.products.length+1;
+    return products.value.length;
 } )
 const title=ref('')
 const image=ref('')
 function pushToProducts(){
-    count.products.push({id:id,title:title.value,image:image.value})
+    products.value.push({id:id,title:title.value,image:image.value})
+    title.value=''
+    image.value=''
 }
 </script>
 

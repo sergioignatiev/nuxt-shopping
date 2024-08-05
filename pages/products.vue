@@ -1,9 +1,9 @@
 <template>
-  <div class="flex  gap-2 flex-wrap-reverse">
+  <div class="flex flex-wrap">
 <TheCard 
 
 v-for="product in count.products"
-:title="product.title"
+
 
 :image="product.image"
 :key="product.id"
