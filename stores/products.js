@@ -268,6 +268,8 @@ export const useProductsStore = defineStore('products', () => {
   const categories=computed(()=>{
     return mapped.value.filter((value,index)=>mapped.value.indexOf(value)===index)
  })
- 
-     return { products,mapped,categories}
+ const bascet=computed(()=>{
+  return products.value.filter(p=>p.bascet===true)
+ })
+     return { products,mapped,categories,bascet}
    })
