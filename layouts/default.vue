@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-[#505050] text-white">
+  <div >
  <TheNavbar/>
-   <div class="px-7">
+   <div >
     <slot/>
    </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
 
 </script>
 

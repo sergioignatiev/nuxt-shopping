@@ -1,47 +1,24 @@
 <template>
-  
-  <NuxtLayout :name="layout">
-    <div class="bg-[#505050] px-12 w-[100%] py-5 rounded-md">
-     
+  <div class="p-4">
+{{bascet}}
 
-</div>
-  <div>
-   
-   <main >
-   <NuxtPage />
-   </main>
-  </div>
+ <div class="capitalize flex gap-5 font-extrabold sticky top-0 "
  
-  </NuxtLayout>
-
+ >
+<NuxtLink to="/">hhhh</NuxtLink>
+<NuxtLink to="/bascet">bascet</NuxtLink>
+<NuxtLink v-for="m in categories"
+:key="m" :to="`/category/${m}`">{{ m }}</NuxtLink>
+</div>
+ <NuxtPage/>
+  </div>
 </template>
+
 <script setup>
+import { useProductsStore } from '~/stores/products';
+import { storeToRefs } from 'pinia';
+const store=useProductsStore()
+const {products,mapped,categories,bascet}=storeToRefs(store)
 
-const width=ref(1000)
-onMounted(()=>{
-  width.value=window.innerWidth
-  window.addEventListener('resize',()=>{width.value=window.innerWidth})
-})
-const layout=computed(()=>{
-  if(width.value>650){
-    return 'default'
-  }else{ return 'mobile'}
-})
 </script>
-<style>
-*{
-  overflow-x: hidden;
-}
-.router-link-exact-active{
-opacity: 0.7;
-}
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.1s;
-}
-.page-enter-from,
-.page-leave-to {
-  transform: translateX(-1px);
 
-}
-</style>

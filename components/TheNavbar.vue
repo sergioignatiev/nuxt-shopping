@@ -1,14 +1,16 @@
 <template>
  
-<nav class="flex gap-4 px-4 py-3 font-bold bg-[#a59568] sticky -top-[1px]" >
-  <NuxtLink class="text-[#505050]" v-for="nav in data.navigation" :to="nav.link" :key="nav.id">{{ nav.label }}</NuxtLink>
-   </nav>
+<nav class="flex justify-around">
+<NuxtLink class="text-[20px] font-extrabold" v-for="n in navigation" :to="n.link" :key="n.id">{{ n.label }}</NuxtLink>
+<input class="w-[300px] p-2 shadow-lg bg-slate-100" type="search" placeholder="Поиск">
+</nav>
 </template>
 
 <script  setup>
- const { data } = await useFetch('/api/navigation',{
-    
-})
+import { useNavigationStore } from '~/stores/navigation';
+import { storeToRefs } from 'pinia';
+const store=useNavigationStore()
+const {navigation}=storeToRefs(store)
 </script>
 
 <style>

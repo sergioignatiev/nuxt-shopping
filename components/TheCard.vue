@@ -1,11 +1,102 @@
 <template>
- <div class="">
-  <img :src="image" :alt="image">
- </div>
+   
+  <div class="">
+    <p>{{ title }}</p>
+    <img class="w-[300px] " :src="image" :alt="image">
+  </div>
 </template>
 
 <script  setup>
-defineProps(['image',])
+defineProps(['image','title'])
+const youtube=ref({
+  "ns": "yt",
+  "el": "detailpage",
+  "cpn": "quGActJozOqupAhe",
+  "ver": 2,
+  "cmt": "241.305",
+  "fmt": "248",
+  "fs": "0",
+  "rt": "326.652",
+  "euri": "",
+  "lact": 11,
+  "cl": "658166115",
+  "mos": 0,
+  "state": "8",
+  "volume": 100,
+  "subscribed": "1",
+  "cbr": "Chrome",
+  "cbrver": "127.0.0.0",
+  "c": "WEB",
+  "cver": "2.20240805.01.00",
+  "cplayer": "UNIPLAYER",
+  "cos": "Windows",
+  "cosver": "10.0",
+  "cplatform": "DESKTOP",
+  "hl": "en_US",
+  "cr": "AR",
+  "len": "589.461",
+  "fexp": "v1,23986029,18615,204121,230596,60171,50926,16229,133212,14625955,11684381,7111,24166,12177,9954,1192,7913,18310,4420,2819,2,2870,13474,1424,29152,2196,9996,19,2,1082,6953,1502,9542,501,1970,3292,2716,152,1386,12665,527,848,3761,7756,5016,173,199,2127,1744,6537,321,148,2,343,1783,14,1322,50,4154,1824,3186,2912,2629,1282,3658,340,426,2399,1410",
+  "feature": "related",
+  "afmt": "251",
+  "muted": "0",
+  "docid": "-51Zxs11nBc",
+  "ei": "-yOxZsnKDpzD0u8PjvW0-As",
+  "plid": "AAYe9HNI1NC_wKjT",
+  "referrer": "https://www.youtube.com/watch?v=BmNp5GeNEMM",
+  "sdetail": "rv:BmNp5GeNEMM",
+  "sourceid": "yw",
+  "of": "zFs0nTlIm_mfITPM87f-4A",
+  "vm": "CAEQARgEOjJBSHFpSlRLbnRsTjRrTWVHVUlCN2dFamN2MHBZLWplN0dySjlsVS0wMHhDeG04UGVxUWJjQU9BckJGdVQzUkRZOGZBRGVXdldYd1dhNGlxb0cxb2hBdXBOSG1nc1BEUU1wZ0dVSjY2VXVFQlNPSWtLcGJHUllsUXJnUjN1UG1SN3dkNVJiRFU3c2pranFUOXFLMzZVbDJB",
+  "vct": "241.305",
+  "vd": "589.461",
+  "vpl": "0.000-241.305",
+  "vbu": "0.000-342.342",
+  "vbs": "0.000-589.461",
+  "vpa": "0",
+  "vsk": "0",
+  "ven": "0",
+  "vpr": "1",
+  "vrs": "4",
+  "vns": "2",
+  "vec": "null",
+  "vemsg": "",
+  "vvol": "0.7620790363466889",
+  "vdom": "1",
+  "vsrc": "1",
+  "vw": "942",
+  "vh": "530",
+  "lct": "241.204",
+  "lsk": false,
+  "lmf": false,
+  "lbw": "7298162.189",
+  "lhd": "0.042",
+  "lst": "76.529",
+  "laa": "itag_251_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_36_range_5184477-5322719_time_360.0-370.0_off_0_len_138243_end_1",
+  "lva": "itag_248_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_61_range_43526660-44265265_time_337.3-342.3_off_0_len_738606_end_1",
+  "lar": "itag_251_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_36_range_5184477-5322719_time_360.0-370.0_off_0_len_138243_end_1",
+  "lvr": "itag_248_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_64_range_45477400-46256334_time_353.4-360.2_off_0_len_778935_end_1",
+  "laq": "0",
+  "lvq": "1991069",
+  "lab": "0.000-370.001",
+  "lvb": "0.000-342.342",
+  "ismb": 1760000,
+  "playerResponseCpn": "quGActJozOqupAhe",
+  "relative_loudness": "2.360",
+  "optimal_format": "1080p",
+  "user_qual": 1080,
+  "release_version": "youtube.player.web_20240731_01_RC00",
+  "debug_videoId": "-51Zxs11nBc",
+  "0sz": "false",
+  "op": "",
+  "yof": "false",
+  "dis": "",
+  "gpu": "ANGLE_(AMD,_AMD_Radeon(TM)_Vega_3_Graphics_(0x000015D8)_Direct3D11_vs_5_0_ps_5_0,_D3D11)",
+  "ps": "desktop-polymer",
+  "debug_playbackQuality": "hd1080",
+  "debug_date": "Mon Aug 05 2024 22:17:22 GMT+0300 (Moscow Standard Time)",
+  "origin": "https://www.youtube.com",
+  "timestamp": 1722885442220
+})
 </script>
 
 <style>
