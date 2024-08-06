@@ -1,16 +1,18 @@
 <template>
   <div class="p-4">
-{{bascet}}
+<TheNavbar/>
 
  <div class="capitalize flex gap-5 font-extrabold sticky top-0 "
  
  >
-<NuxtLink to="/">hhhh</NuxtLink>
-<NuxtLink to="/bascet">bascet</NuxtLink>
+
+
 <NuxtLink v-for="m in categories"
-:key="m" :to="`/category/${m}`">{{ m }}</NuxtLink>
+:key="m" :to="`/category/${m}`" >{{ m }}</NuxtLink>
 </div>
+<Suspense>
  <NuxtPage/>
+ </Suspense>
   </div>
 </template>
 
