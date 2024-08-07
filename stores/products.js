@@ -226,7 +226,7 @@ export const useProductsStore = defineStore('products', () => {
     { 
       'bascet':false,
       "id": 18,
-      "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+      "title": "UBJ Women's Solid Short Sleeve Boat Neck V ",
       "price": 9.85,
       "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
       "category": "women's clothing",
@@ -262,8 +262,26 @@ export const useProductsStore = defineStore('products', () => {
         "rate": 3.6,
         "count": 145
       }
-    }
-  ])
+    },
+    {
+      'bascet':false,
+      "id": 21,
+      "title": "Женская Хлопковая Рубашка",
+      "price": 12.99,
+      "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Женская Одежда",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+   
+
+
+
+  ]
+)
   const mapped=ref(products.value.map(p=>p.category))
   const categories=computed(()=>{
     return mapped.value.filter((value,index)=>mapped.value.indexOf(value)===index)

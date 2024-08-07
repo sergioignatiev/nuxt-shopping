@@ -4,7 +4,7 @@
 
 
 
-<main class="px-3">
+<main class="px-3 ">
  <NuxtPage/>
  </main>
   </NuxtLayout>

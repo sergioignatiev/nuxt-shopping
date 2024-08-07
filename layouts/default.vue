@@ -1,5 +1,5 @@
 <template>
- <div >
+ <div class="">
 <TheNavbar/>
 <TheCategories/>
   <slot/>
