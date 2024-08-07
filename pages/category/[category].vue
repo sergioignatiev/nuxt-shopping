@@ -1,8 +1,12 @@
 <template>
-    <div>
-     <div v-for="c in category" :key="c.id">
-        <NuxtLink :to="`/id/${c.id}`">{{ c.title }}</NuxtLink>
-     </div>
+    <div class="p-8 flex flex-wrap gap-4">
+     
+        <NuxtLink class="w-[300px] p-5 flex flex-col justify-between " v-for="c in category" :key="c.id" :to="`/id/${c.id}`">
+        <img class="w-[290px]" :src="c.image" :alt="c.title">
+        <h1 class="font-extrabold text-[19px]">{{ c.title }}</h1>
+        <p>От {{ c.price }}$</p>
+        </NuxtLink>
+     
     </div>
   </template>
   

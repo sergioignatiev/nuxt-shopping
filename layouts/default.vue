@@ -1,10 +1,9 @@
 <template>
-  <div >
- <TheNavbar/>
-   <div >
-    <slot/>
-   </div>
-  </div>
+ <div >
+<TheNavbar/>
+<TheCategories/>
+  <slot/>
+ </div>
 </template>
 
 <script  setup>

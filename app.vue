@@ -1,26 +1,17 @@
 <template>
-  <div class="p-4">
-<TheNavbar/>
-
- <div class="capitalize flex gap-5 font-extrabold sticky top-0 "
+  <NuxtLayout >
  
- >
 
 
-<NuxtLink v-for="m in categories"
-:key="m" :to="`/category/${m}`" >{{ m }}</NuxtLink>
-</div>
-<Suspense>
+
+<main class="px-3">
  <NuxtPage/>
- </Suspense>
-  </div>
+ </main>
+  </NuxtLayout>
 </template>
 
 <script setup>
-import { useProductsStore } from '~/stores/products';
-import { storeToRefs } from 'pinia';
-const store=useProductsStore()
-const {products,mapped,categories,bascet}=storeToRefs(store)
+
 
 </script>
 
