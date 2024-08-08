@@ -1,7 +1,7 @@
 <template>
   
    
-    <div class="grid grid-cols-3 p-5 gap-7 ">
+    <div class="grid grid-cols-3 p-5 gap-7 mt-7 ">
 
         <div class="">
 <img class=" sm:sticky top-7" :src="product.image" :alt="product.title">

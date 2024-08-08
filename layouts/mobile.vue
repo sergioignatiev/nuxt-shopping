@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-[#505050]">
+  <div class="">
     <TheMobileNavbar/>
-    <div class="px-2">
+    <div class="pt-[3em]">
     <slot/>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
 
 </script>
 
