@@ -6,7 +6,14 @@
     
     <BurgerMenu v-if="!visibility" @click="changeVisibility"/>
     <CloseMenu v-else @click="changeVisibility"/>
-    <input type="search" class="w-[80%] px-3 rounded-lg text-white h-[2em] bg-slate-900" placeholder="искать товар">
+    <input @change="findMatches" type="search" class="w-[80%] px-3 rounded-lg text-white h-[2em] bg-slate-900" placeholder="искать товар" v-model="search">
+  
+    <SearchBox
+  :findMatches="findMatches"
+  :search="search"
+  @click="search=''"
+  />
+  
   </div>
    <div v-show="visibility">
  
@@ -27,17 +34,23 @@
 
 <script  setup>
 import BurgerMenu from './Menu/BurgerMenu.vue';
-
+import SearchBox from './Menu/SearchBox.vue';
 import { useProductsStore } from '#imports';
 import { storeToRefs } from '#imports';
 ;
 import CloseMenu from './Menu/CloseMenu.vue';
 const store=useProductsStore()
-const {categories}=storeToRefs(store)
+const {categories,products}=storeToRefs(store)
 const visibility=ref(false)
 function changeVisibility(){
   visibility.value=!visibility.value
 }
+
+const search=ref('')
+const findMatches=computed(()=>{
+  
+  return products.value.filter(i=>i.title.toLowerCase().includes(search.value.toLocaleLowerCase()))
+})
 </script>
 
 <style scoped>
