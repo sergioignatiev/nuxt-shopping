@@ -4,7 +4,7 @@
     <div class="grid grid-cols-3 p-5 gap-7 mt-7 ">
 
         <div class="">
-<img class=" sm:sticky top-7" :src="product.image" :alt="product.title">
+<img class=" sm:sticky top-7 -z-10" :src="product.image" :alt="product.title">
 </div>
 
 <div class="">
@@ -13,8 +13,8 @@
     <p class="text-[18px] font-bold mt-4">{{ product.description }}</p>
     
 </div>
-<section>
-<div class=" rounded-lg shadow-lg p-5 flex flex-col sticky top-8 justify-between gap-4">
+<section class="">
+<div class=" rounded-lg shadow-lg p-5 flex flex-col   justify-between gap-4">
 <div class="text-[25px] font-bold">{{ product.price }}$</div>
 <div class="bg-slate-100 px-3 py-2 rounded-md font-extrabold ">В рассрочку на 4 месяца по {{ product.price/4 }}$</div>
 
