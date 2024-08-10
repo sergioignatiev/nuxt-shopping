@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <TheMobileNavbar/>
-    <div class="pt-[7em]">
+    <div class="pt-[5em]">
     <slot/>
     </div>
   </div>

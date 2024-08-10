@@ -1,7 +1,7 @@
 <template>
- <div class="">
+ <div class="bg-slate-100">
 <TheNavbar/>
-<TheCategories/>
+
   <slot/>
   <TheFooter/>
  </div>
