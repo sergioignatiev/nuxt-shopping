@@ -21,11 +21,8 @@ onMounted(() => {
 function sizeChange(){
   width.value=window.innerWidth
 }
-/*const layout=computed(()=>{
-  if(width.value>900){
-    return 'default'
-  }
-  else {return 'mobile'}
-})*/
+useSeoMeta({
+  title:"BALD-E"
+})
 </script>
 

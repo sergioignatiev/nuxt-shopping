@@ -1,9 +1,9 @@
 <template>
  
-<nav class="flex sticky top-0 z-50 bg-white justify-between items-center py-3 px-5 ">
+<nav class="flex sticky top-0 z-50 bg-white justify-between items-center h-[70px] 2xl:px-[287px] px-5  ">
 
 <NuxtLink to="/">
-  <img src="https://raw.githubusercontent.com/scottyzen/woonuxt/f3c6d3bc640b5a6543c0cfc5f9f32792336ca864/woonuxt_base/public/images/logo-woocommerce.svg" alt="">
+  <img src="/logo2.png" alt="BALDEE">
 </NuxtLink>
 
 <div class="flex items-center gap-4">
@@ -14,7 +14,7 @@
   <div class="flex items-center">
     <svg class="absolute px-1"  xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#171616" d="M10.77 18.3a7.53 7.53 0 1 1 7.53-7.53a7.53 7.53 0 0 1-7.53 7.53m0-13.55a6 6 0 1 0 6 6a6 6 0 0 0-6-6"></path><path fill="#171616" d="M20 20.75a.74.74 0 0 1-.53-.22l-4.13-4.13a.75.75 0 0 1 1.06-1.06l4.13 4.13a.75.75 0 0 1 0 1.06a.74.74 0 0 1-.53.22"></path></svg>
     <div @click="search=''" class="focus:outline-none absolute right-0 m-1  text-[10px] p-1 bg-violet-200 text-violet-500 rounded-md cursor-pointer outline-none" v-if="search">Очистить</div>
-<input @change="findMatches" class="outline-none flex items-center w-[500px] rounded-md p-1 px-[1.5em] shadow-inner shadow-slate-300  bg-slate-100" type="text" placeholder="Искать Товар..."  v-model="search">
+<input @change="findMatches" class="focus:outline-none flex items-center w-[500px] h-[38px] rounded-md p-1 px-[1.5em] shadow-inner shadow-slate-300  bg-slate-100" type="text" placeholder="Искать Товар..."  v-model="search">
 </div>
 <MenuSearchBox
 :find-matches="findMatches"
