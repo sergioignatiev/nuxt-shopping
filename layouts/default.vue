@@ -1,5 +1,5 @@
 <template>
- <div class="bg-slate-100">
+ <div class="bg-[#e6e6e6]">
 <TheNavbar/>
 
   <slot/>

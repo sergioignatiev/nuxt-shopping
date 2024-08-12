@@ -8,14 +8,16 @@
       <input type="checkbox"  name="f" id="" />
     
     </form>
+    <div class="flex flex-wrap gap-10">
    <TheCard
-   v-for=" c in filtered"
+   v-for=" c in products"
    :title="c.title"
    :image="c.image"
    :id="c.id"
    :key="c.id"
 
    />
+   </div>
   </div>
 </template>
 

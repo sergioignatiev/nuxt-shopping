@@ -1,8 +1,8 @@
 <template>
-  <NuxtLink :to="`/id/${id}`" class=" w-[250px] rounded-sm">
-    <div class="h-[250px] flex justify-center bg-white rounded-lg  p-4">
-        <div class="h-full">
-    <img class="h-full w-auto " :src="image" :alt="title">
+  <NuxtLink :to="`/id/${id}`" class="  rounded-sm w-[210px]">
+    <div class="flex justify-center bg-white rounded-lg  p-4">
+        <div class="w-[210px] h-[280px]">
+    <img class="w-full max-h-full" :src="image" :alt="title">
     </div>
     </div>
     <p>{{ title }}</p>

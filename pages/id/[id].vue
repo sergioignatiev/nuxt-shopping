@@ -47,6 +47,7 @@ const product=computed(()=>{
 function addToTheBascet(){
 product.value.bascet=true
 }
+
 </script>
 
 <style>
