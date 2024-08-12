@@ -24,7 +24,7 @@
 
     <p class="text-sm">{{ title }}</p>
 
-<p class="font-bold">${{ price }}</p>
+<p class="font-bold">${{ price }}.</p>
 </div>
 
   </NuxtLink>
