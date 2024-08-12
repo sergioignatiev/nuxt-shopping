@@ -30,6 +30,7 @@
    :image="c.image"
    :id="c.id"
    :rating="c.rating.rate"
+   :price='c.price'
    :key="c.id"
 
    />
