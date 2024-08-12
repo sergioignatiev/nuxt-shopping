@@ -5,6 +5,7 @@
     :title="c.title"
     :image="c.image"
     :id="c.id"
+    :rating="c.rating.rate"
     :key="c.id"
     />
    

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="paddings">
       <div class="text-[30px] pt-5" v-if="bascet.length===0">Корзина Пуста </div>
       <div v-else >
          <p>{{total}}</p>

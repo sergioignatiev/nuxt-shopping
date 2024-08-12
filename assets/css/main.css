@@ -1,0 +1,9 @@
+.paddings{
+    @apply 2xl:px-[280px] px-5
+}
+.bg-main{
+    @apply bg-[#005489]
+}
+.color-main{
+    @apply text-[#005489]
+}
