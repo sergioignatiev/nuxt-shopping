@@ -1,8 +1,9 @@
 <template>
-  <div class="w-[230px] bg-slate-100">
+  <div class="w-[230px] bg-slate-100 my-3">
     <div  @click="switcher=!switcher">{{ name }}</div>
     <div v-show="switcher"><slot/></div>
   </div>
+  <hr>
 </template>
 
 <script lang="ts" setup>

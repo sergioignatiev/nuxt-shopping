@@ -10,11 +10,12 @@
       :category="c.category"
       :key="c.id"
       />
-     
+    
     </div>
   </template>
   
   <script lang="ts" setup>
+  
   import { useProductsStore } from '#imports';
   import { storeToRefs } from '#imports';
   const store=useProductsStore()
@@ -22,6 +23,9 @@
   const route=useRoute()
   const category=computed(()=>{
       return products.value.filter(f=>f.category==route.params.category)
+  })
+  useSeoMeta({
+    title:`${route.params.category}`
   })
   </script>
   

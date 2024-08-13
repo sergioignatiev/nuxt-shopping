@@ -1,15 +1,23 @@
 <template>
     <div class="paddings py-5 flex  ">
   
-      <form class=" ">
+   
+
+<form class=" ">
       <TheFilterWrapper name="ЦЕНА">
-        <input type="range" min="0" max="100" v-model="price" name="" id="">
+        <input type="range" min="0" max="1000" v-model="price" name="" id="">
         </TheFilterWrapper>
-        
+
         <TheFilterWrapper name="Категории">
-        <div class="flex gap-4 w-[230px]" >
+            <div class="flex gap-4 w-[230px]" >
+          <input type="checkbox" name="categories" id="women"  value="women" v-model="women">
+          <label for="women">Женская Одежда</label>
+        
+      </div>
+
+        <div class="flex gap-4 " >
           <input type="checkbox" name="categories" id="jewelery"  value="jewelery" v-model="jewelery">
-          <label for="jewelery">jewelery</label>
+          <label for="jewelery">Украшения</label>
         
       </div>
   
@@ -24,7 +32,24 @@
         
       </div>
   </TheFilterWrapper>
-  
+  <TheFilterWrapper name="Rating">
+            
+
+                <label for="1" class="flex ">
+                    <input type="radio" value=1 name="rating" id="1" v-model="fiveStar">
+                    <IconsTheStar v-for="star in 1" fill="orange" :key="star" />
+                    <IconsTheStar v-for="star in 4" fill="grey" :key="star" />
+                </label>
+
+                <label for="2" class="flex ">
+                    <input type="radio" value=2 name="rating" id="2" v-model="fiveStar">
+                    <IconsTheStar v-for="star in 2" fill="orange" :key="star" />
+                    <IconsTheStar v-for="star in 3" fill="grey" :key="star" />
+                </label>
+    
+   
+                <button @click="fiveStar=null">Сбросить</button>
+</TheFilterWrapper>
   
       </form>
      
@@ -55,11 +80,29 @@
   const jewelery=ref(false)
   const electronics=ref(false)
   const mens=ref(false)
-  
-  const price=ref(100)
-const product=computed(()=>{
-    return products.value.filter(f=>f.price<price.value)
+  const women=ref(false)
+  const fiveStar=ref(null)
+
+  const price=ref(1000)
+
+  const stars=computed(()=>{
+    if(fiveStar.value){
+    return products.value.filter(f=>f.rating.rate==fiveStar.value)
+  }else{return products.value}
+
 })
+
+const product=computed(()=>{
+    return stars.value.filter(f=>f.price<price.value)
+})
+
+const filteredWomen=computed(()=>{
+    if(women.value===false){
+      return []
+    }else{
+      return product.value.filter(j=>j.category==='Женская Одежда')
+    }
+  })
 
   const filteredJewelery=computed(()=>{
     if(jewelery.value===false){
@@ -84,11 +127,11 @@ const product=computed(()=>{
   })
   
   const filtered=computed(()=>{
-    if(electronics.value==false&&jewelery.value===false&&mens.value===false){
+    if(electronics.value==false&&jewelery.value===false&&mens.value===false&&women.value===false){
       return [...product.value]
       }
       else{
-        return [...filteredJewelery.value,...filteredElectronics.value,...filteredMens.value]
+        return [...filteredJewelery.value,...filteredElectronics.value,...filteredMens.value,...filteredWomen.value]
       }
   
   
@@ -101,5 +144,9 @@ const product=computed(()=>{
   }
   label{
     @apply text-sm
+  }
+  label.flex{
+    @apply py-3
+
   }
   </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>CONTACTS</h1>
+  <img src="/linguriosa.png" alt="linguriosa">
   </div>
 </template>
 

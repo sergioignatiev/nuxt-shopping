@@ -30,7 +30,7 @@
     <button class=" hover:opacity-90 rounded-md px-4 py-3 text-[20px] font-bold shadow-md text-white bg-green-500" v-show="product.bascet">Добавлено</button>
   </div>
   </section>
-  <img src="https://raw.githubusercontent.com/scottyzen/woonuxt/f3c6d3bc640b5a6543c0cfc5f9f32792336ca864/woonuxt_base/public/icons/pp.svg" alt="">
+  
   </div>
   
   </template>

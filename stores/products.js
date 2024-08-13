@@ -11,7 +11,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Мужская Одежда",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       "rating": {
-        "rate": 3.9,
+        "rate": 3,
         "count": 120
       }
     },
@@ -24,7 +24,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Мужская Одежда",
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "rating": {
-        "rate": 4.1,
+        "rate": 1,
         "count": 259
       }
     },
@@ -37,7 +37,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Мужская Одежда",
       "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
       "rating": {
-        "rate": 4.7,
+        "rate": 4,
         "count": 500
       }
     },
@@ -50,7 +50,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Мужская Одежда",
       "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
       "rating": {
-        "rate": 2.1,
+        "rate": 2,
         "count": 430
       }
     },
@@ -63,7 +63,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Украшения",
       "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
       "rating": {
-        "rate": 4.6,
+        "rate": 2,
         "count": 400
       }
     },
@@ -76,7 +76,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Украшения",
       "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
       "rating": {
-        "rate": 3.9,
+        "rate": 3,
         "count": 70
       }
     },
@@ -102,7 +102,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Украшения",
       "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
       "rating": {
-        "rate": 1.9,
+        "rate": 1,
         "count": 100
       }
     },
@@ -115,7 +115,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
       "rating": {
-        "rate": 3.3,
+        "rate": 3,
         "count": 203
       }
     },
@@ -128,7 +128,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       "rating": {
-        "rate": 2.9,
+        "rate": 1,
         "count": 470
       }
     },
@@ -141,7 +141,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
       "rating": {
-        "rate": 4.8,
+        "rate": 4,
         "count": 319
       }
     },
@@ -154,7 +154,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
       "rating": {
-        "rate": 4.8,
+        "rate": 5,
         "count": 400
       }
     },
@@ -167,7 +167,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
       "rating": {
-        "rate": 2.9,
+        "rate": 3,
         "count": 250
       }
     },
@@ -180,7 +180,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Электроника",
       "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
       "rating": {
-        "rate": 2.2,
+        "rate": 1,
         "count": 140
       }
     },
@@ -193,7 +193,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
       "rating": {
-        "rate": 2.6,
+        "rate": 2,
         "count": 235
       }
     },
@@ -206,7 +206,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
       "rating": {
-        "rate": 2.9,
+        "rate": 2,
         "count": 340
       }
     },
@@ -219,7 +219,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
       "rating": {
-        "rate": 3.8,
+        "rate": 1,
         "count": 679
       }
     },
@@ -232,7 +232,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
       "rating": {
-        "rate": 4.7,
+        "rate": 5,
         "count": 130
       }
     },
@@ -246,7 +246,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
       "rating": {
-        "rate": 4.5,
+        "rate": 5,
         "count": 146
       }
     },
@@ -259,7 +259,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": "Женская Одежда",
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
       "rating": {
-        "rate": 3.6,
+        "rate": 3,
         "count": 145
       }
     },
@@ -272,7 +272,7 @@ export const useProductsStore = defineStore('products', () => {
       "category": 'Женская Одежда',
       "image": "https://v3.woonuxt.com/.netlify/images?w=440&h=496&url=https:%2F%2Fsecure.woonuxt.com%2Fwp-content%2Fuploads%2F2021%2F10%2FScreenshot-2021-10-10-at-11.10.03-a.m.-768x826.png",
       "rating": {
-        "rate": 3.6,
+        "rate": 4,
         "count": 145
       }
     },

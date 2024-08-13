@@ -5,9 +5,13 @@
     </div>
     
     </div>
+ 
   </template>
   
   <script  setup>
+  useSeoMeta({
+    title:"Все Категории"
+  })
   import { useProductsStore } from '#imports';
   import { storeToRefs } from '#imports';
   const store=useProductsStore()
