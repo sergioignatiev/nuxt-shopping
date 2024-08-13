@@ -1,6 +1,6 @@
 <template>
   <div>
-  <img src="/linguriosa.png" alt="linguriosa">
+  <img src="/public/linguriosa.png" alt="linguriosa">
   </div>
 </template>
 
