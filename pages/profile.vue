@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>PROFILE</h1>
-   
+    <h1>PROFFILE</h1>
   </div>
 </template>
 

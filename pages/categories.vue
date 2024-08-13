@@ -1,7 +1,7 @@
 <template>
     <div class="paddings">
     <div v-for="n in categories" :key="n">
- <NuxtLink :to="`/category/${n}`">{{ n }}</NuxtLink>
+ <NuxtLink :to="`/${n}`">{{ n }}</NuxtLink>
     </div>
     
     </div>
