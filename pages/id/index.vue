@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>PROFFILE</h1>
-    <NuxtPage/>
+    <h1 class="text-main">INDEX>VUE</h1>
   </div>
 </template>
 

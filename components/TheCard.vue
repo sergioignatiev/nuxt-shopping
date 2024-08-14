@@ -1,6 +1,6 @@
 <template>
 
-  <NuxtLink :to="`/id/${id}`" class="  rounded-sm w-[210px] flex flex-col justify-between">
+  <NuxtLink :to="`/id/${id}`" class="  rounded-sm w-[210px] flex flex-col justify-start ">
     
     <div class="flex   bg-white rounded-lg  p-4">
         <div class="w-[210px] h-[280px]">
@@ -9,7 +9,7 @@
     </div>
 
 
-    <div class="flex flex-col justify-between  h-full">
+    <div class="flex flex-col justify-between items-between">
 
         <div class="flex items-center">
    <div v-for="i in Math.floor(rating)" :key="i+1">

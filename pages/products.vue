@@ -1,11 +1,11 @@
 <template>
-    <div class="paddings py-5 flex  ">
+    <div class="paddings py-5 flex ">
   
    
 
-<form class=" ">
+<div class=" basis-1/4 px-5  ">
       <TheFilterWrapper name="ЦЕНА">
-        <input type="range" min="0" max="1000" v-model="price" name="" id="">
+        <input class="w-full" type="range" min="0" max="1000" v-model="price" name="" id="">
         </TheFilterWrapper>
 
         <TheFilterWrapper name="Категории">
@@ -32,7 +32,7 @@
         
       </div>
   </TheFilterWrapper>
-  <TheFilterWrapper name="Rating">
+  <TheFilterWrapper name="Рейтинг">
             
 
                 <label for="1" class="flex ">
@@ -46,14 +46,32 @@
                     <IconsTheStar v-for="star in 2" fill="orange" :key="star" />
                     <IconsTheStar v-for="star in 3" fill="grey" :key="star" />
                 </label>
-    
+                <label for="3" class="flex  ">
+                    <input class="p-3" type="radio" value=3 name="rating" id="3" v-model="fiveStar">
+                    <IconsTheStar v-for="star in 3" fill="orange" :key="star" />
+                    <IconsTheStar v-for="star in 2" fill="grey" :key="star" />
+                </label>
+                <label for="4" class="flex ">
+                    <input class="font-[30px]" type="radio" value=4 name="rating" id="4" v-model="fiveStar">
+                    <IconsTheStar v-for="star in 4" fill="orange" :key="star" />
+                    <IconsTheStar v-for="star in 1" fill="grey" :key="star" />
+                    <p>и выше</p>
+                </label>
+
+                <label for="5" class="flex ">
+                    <input class="font-[30px]" type="radio" value=5 name="rating" id="5" v-model="fiveStar">
+                    <div class="px-3 flex items-center"><IconsTheStar v-for="star in 5" fill="orange" :key="star" />
+                    <IconsTheStar v-for="star in 0" fill="grey" :key="star" />
+                                      
+                  </div> 
+                </label>
    
-                <button @click="fiveStar=null">Сбросить</button>
+                <button class="bg-main px-5 py-2 rounded-lg text-white" @click="fiveStar=0">Любой Рейтинг</button>
 </TheFilterWrapper>
   
-      </form>
+</div>
      
-      <div class="flex flex-wrap gap-10">
+      <div class=" basis-3/4 flex flex-wrap gap-10">
      <TheCard
      v-for=" c in filtered"
      :title="c.title"
@@ -68,7 +86,7 @@
     </div>
   </template>
   
-  <script  lang="ts" setup>
+  <script lang="ts"  setup>
   useSeoMeta({
     title:"ВСЕ ПРОДУКТЫ"
   })
@@ -81,13 +99,13 @@
   const electronics=ref(false)
   const mens=ref(false)
   const women=ref(false)
-  const fiveStar=ref(null)
+  const fiveStar=ref(0)
 
   const price=ref(1000)
 
   const stars=computed(()=>{
     if(fiveStar.value){
-    return products.value.filter(f=>f.rating.rate==fiveStar.value)
+    return products.value.filter(f=>f.rating.rate>fiveStar.value-1)
   }else{return products.value}
 
 })
@@ -136,17 +154,22 @@ const filteredWomen=computed(()=>{
   
   
   })
+
+  
   </script>
   
   <style scoped>
-  input[type=checkbox]{
+  input{
     @apply accent-[#005489]
   }
   label{
     @apply text-sm
   }
   label.flex{
-    @apply py-3
+    @apply py-3  
 
+  }
+  input[type="radio"]{
+    @apply accent-[#005489] 
   }
   </style>

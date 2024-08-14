@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>PROFFILE</h1>
-    <NuxtPage/>
+    <img src="/public/linguriosa.png" alt="">
   </div>
 </template>
 

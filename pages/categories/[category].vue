@@ -10,11 +10,11 @@
       :category="c.category"
       :key="c.id"
       />
-    
+  
     </div>
   </template>
   
-  <script lang="ts" setup>
+  <script  setup>
   
   import { useProductsStore } from '#imports';
   import { storeToRefs } from '#imports';
