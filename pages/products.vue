@@ -86,7 +86,8 @@
     </div>
   </template>
   
-  <script lang="ts"  setup>
+  <script   setup>
+ 
   useSeoMeta({
     title:"ВСЕ ПРОДУКТЫ"
   })
