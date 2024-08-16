@@ -1,4 +1,5 @@
 <template>
+  
   <div class="w-full py-3  ">
     <div class="font-bold py-3 flex items-between justify-between w-full "  @click="switcher=!switcher">
       <p>{{ name }}</p>

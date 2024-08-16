@@ -1,15 +1,17 @@
 <template>
-    <div class="paddings py-5 flex ">
+ 
+    <div class="paddings  flex py-3 ">
   
    
-
-<div class=" basis-1/4 px-5  ">
-      <TheFilterWrapper name="ЦЕНА">
+      
+<div class=" basis-[230px] ">
+  
+      <TheFilterWrapper :name="`Цена < ${price}$`">
         <input class="w-full" type="range" min="0" max="1000" v-model="price" name="" id="">
         </TheFilterWrapper>
 
         <TheFilterWrapper name="Категории">
-            <div class="flex gap-4 w-[230px]" >
+            <div class="flex gap-4 " >
           <input type="checkbox" name="categories" id="women"  value="women" v-model="women">
           <label for="women">Женская Одежда</label>
         
@@ -68,10 +70,11 @@
    
                 <button class="bg-main px-5 py-2 rounded-lg text-white" @click="fiveStar=0">Любой Рейтинг</button>
 </TheFilterWrapper>
-  
+ 
+
 </div>
-     
-      <div class=" basis-3/4 flex flex-wrap gap-10">
+
+      <div class="basis-[100%]  flex flex-wrap gap-y-10 justify-around ">
      <TheCard
      v-for=" c in filtered"
      :title="c.title"
@@ -82,7 +85,9 @@
      :key="c.id"
   
      />
+     
      </div>
+     
     </div>
   </template>
   
@@ -160,6 +165,7 @@ const filteredWomen=computed(()=>{
   </script>
   
   <style scoped>
+
   input{
     @apply accent-[#005489]
   }
@@ -171,6 +177,8 @@ const filteredWomen=computed(()=>{
 
   }
   input[type="radio"]{
-    @apply accent-[#005489] 
+    @apply accent-[#005489];
+
   }
+  
   </style>
