@@ -4,7 +4,7 @@
     
     <div class="flex   bg-white rounded-lg  p-4">
         <div class="w-[210px] h-[280px]">
-    <img class="w-full max-h-full" :src="image" :alt="title">
+    <NuxtImg class="w-full max-h-full" :src="image" :alt="title"/>
     </div>
     </div>
 

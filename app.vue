@@ -4,7 +4,7 @@
 
 
 
-<main class=" min-h-[100vh]  ">
+<main class=" min-h-[100vh]" >
 
  <NuxtPage/>
  </main>

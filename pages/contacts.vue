@@ -1,13 +1,22 @@
 <template>
-  <div class="flex max-w-[100vw]  ">
-    <div class="basis-1/3 bg-slate-950 text-red-500 ">test</div>
-<div class="basis-1/3 bg-red-400"><img src="/public/linguriosa.png" alt=""></div>
-<div class="basis-1/3 bg-red-400 rotate-90 hover:rotate-0 duration-1000"><img src="/public/linguriosa.png" alt=""></div>
-  </div>
+<div class="">
+<input type="text" name="" id="" v-model="width">
+  <div class="" :inert="f">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum dolorem a, ea et facilis excepturi dolor consequatur distinctio in alias fugiat recusandae hic autem doloremque minima maiores consequuntur voluptatem.</div>
+</div>
+
+
 </template>
 
-<script lang="ts" setup>
-
+<script  setup>
+const width=ref('')
+const f=ref(false)
+watch(width,(w,s)=>{
+if(w.includes("linguriosa")){
+  f.value=true
+}else{
+  f.value=false
+}
+})
 </script>
 
 <style scoped>

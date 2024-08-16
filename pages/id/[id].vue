@@ -5,7 +5,7 @@
    
         <div class="">
          
-  <img class=" sm:sticky top-7 " :src="product.image" :alt="product.title">
+  <NuxtImg class=" sm:sticky top-7 " width="100%" :src="product.image" :alt="product.title"/>
   </div>
   
   <div class="">
