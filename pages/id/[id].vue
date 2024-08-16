@@ -1,8 +1,8 @@
 <template>
+
   
-   
     <div class="grid grid-cols-3 paddings gap-7 mt-7 ">
-  
+   
         <div class="">
          
   <img class=" sm:sticky top-7 " :src="product.image" :alt="product.title">
@@ -32,7 +32,7 @@
   </section>
   
   </div>
-  
+
   </template>
   
   <script setup>
@@ -51,6 +51,7 @@
   useSeoMeta({
     title:`${product.value.title}`
   })
+  
   </script>
   
   <style>

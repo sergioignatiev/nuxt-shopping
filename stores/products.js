@@ -10,6 +10,6 @@ export const useProductsStore = defineStore('products', () => {
  const bascet=computed(()=>{
   return products.value.filter(p=>p.bascet===true)
  })
-
-     return { products,mapped,categories,bascet}
+const profile=ref('')
+     return { products,mapped,categories,bascet,profile}
    })

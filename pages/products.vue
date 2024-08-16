@@ -4,7 +4,7 @@
   
    
       
-<div class=" basis-[230px] ">
+<div class=" basis-[230px] shrink-0 ">
   
       <TheFilterWrapper :name="`Цена < ${price}$`">
         <input class="w-full" type="range" min="0" max="1000" v-model="price" name="" id="">
@@ -74,7 +74,7 @@
 
 </div>
 
-      <div class="basis-[100%]  flex flex-wrap gap-y-10 justify-around ">
+      <div class="basis-[100%] shrink-1  flex flex-wrap gap-y-10 justify-around ">
      <TheCard
      v-for=" c in filtered"
      :title="c.title"

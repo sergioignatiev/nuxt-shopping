@@ -22,7 +22,8 @@ function sizeChange(){
   width.value=window.innerWidth
 }
 useSeoMeta({
-  title:"BALD-E"
+  title:"BALD-E",
+  lang:'ru'
 })
 </script>
 
@@ -30,7 +31,7 @@ useSeoMeta({
 <style>
 @import url(https://db.onlinewebfonts.com/c/05e3738cb717a3ec76df1fa726367746?family=HelveticaNeueCyr-Roman);
 *{
-  font-family: "HelveticaNeueCyr-Roman";
+  font-family: "HelveticaNeueCyr-Roman",monospace
 }
 
 .router-link-exact-active{
