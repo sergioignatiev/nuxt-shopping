@@ -1,4 +1,8 @@
 
+@import '/assets/fonts/stylesheet.css';
+*{
+	font-family: 'HelveticaNeueCyr',monospace;
+}
 .paddings{
     @apply 2xl:px-[280px] px-5
 }
