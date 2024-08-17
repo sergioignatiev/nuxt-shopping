@@ -10,8 +10,8 @@
 
 <script  setup>
 const {findMatches,search}= defineProps(
-  {findMatches:{type:Function,default:()=>{}}
-  ,search:{type:String,default:""}})
+  {findMatches:{type:Function}
+  ,search:{type:Array}})
 </script>
 
 <style>
