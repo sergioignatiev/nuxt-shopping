@@ -9,9 +9,7 @@
 </template>
 
 <script  setup>
-const {findMatches,search}= defineProps(
-  {findMatches:{type:Function}
-  ,search:{type:Array}})
+defineProps(['findMatches','search'])
 </script>
 
 <style>
