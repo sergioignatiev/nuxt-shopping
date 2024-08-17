@@ -3,8 +3,9 @@
  
 age:{{ timew }}
 <button @click="increaseTimew">increaseTimew {{ doubleT }}</button>
-</div> 
 <h1>{{ myTest }}</h1>
+</div> 
+
 </template>
 <script>
 
@@ -16,24 +17,24 @@ export default{
     doubleT:''
   }
   },
+  computed:{
+    myTest(){
+      return this.timew*2
+    }
+  }, watch:{timew(t){
+    if(t>3){
+      this.doubleT='Enougn'
+      
+    }else {
+      this.doubleT='LINGIRIOSA'
+    }
+  }
+  },
+ 
   methods:{
     increaseTimew(){
       this.timew++
     }
   },
-  watch:{timew(t){
-    if(t>3){
-      this.doubleT='Enougn'
-      
-    }else{
-      this.doubleT=''
-    }
-  }
-  },
-  computed:{
-    myTest(){
-      return this.timew+29
-    }
-  }
 }
 </script>

@@ -2,13 +2,13 @@
     <div class="flex flex-wrap gap-6 p-6">
       <TheCard
       v-for="c in category"
+      :id="c.id"
+      :key="c.id"
       :title="c.title"
       :image="c.image"
-      :id="c.id"
       :rating="c.rating.rate"
       :price="c.price"
       :category="c.category"
-      :key="c.id"
       />
   
     </div>
@@ -16,8 +16,8 @@
   
   <script  setup>
   
-  import { useProductsStore } from '#imports';
-  import { storeToRefs } from '#imports';
+  import { useProductsStore,storeToRefs } from '#imports';
+ 
   const store=useProductsStore()
   const {products}=storeToRefs(store)
   const route=useRoute()

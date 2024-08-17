@@ -13,7 +13,10 @@
 <script lang="ts" setup>
 const switcher=ref(true)
 const {name}=defineProps({
-    name:String
+    name:{type:String,
+      default:"None"
+    }
+    
 })
 </script>
 

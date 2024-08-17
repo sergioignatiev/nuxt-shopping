@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-const {name}=defineProps({
+const {name,phone}=defineProps({
     name:{type:String,required:true},
-    phone:{type:Number}
+    phone:{type:Number,default:0}
 })
 const price=ref(0)
 </script>
