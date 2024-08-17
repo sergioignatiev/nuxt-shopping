@@ -8,7 +8,7 @@
    <NuxtLink to='/products' class="px-[23px] w-fit mt-[26px] py-[18px] bg-gray-800 rounded-[10px] text-white">Начать Покупки</NuxtLink>
    </div>
   
-   <NuxtImg  class="h-[100vh] absolute max-h-fit min-w-full max-w-[100%]" src="/images/main.jpg" alt="MAIN IMAGE"/>
+   <NuxtImg  class="h-[100vh] absolute max-h-fit min-w-full max-w-[100%]" src="linguriosa.png" alt="MAIN IMAGE"/>
   
   </section>
   </template>

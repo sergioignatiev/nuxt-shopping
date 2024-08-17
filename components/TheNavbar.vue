@@ -26,11 +26,11 @@
 
 <div class="flex gap-4 items-center">
   
-  <NuxtLink to="/profile">
+  <NuxtLink aria-label="profile" to="/profile">
   <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#171616" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"/></svg>
 </NuxtLink>
 
-<NuxtLink class="relative" to="/bascet">
+<NuxtLink aria-label="YOUR BASCET" class="relative" to="/bascet">
 <span v-show="bascet.length>0" class="absolute top-0 right-0 px-[4px] rounded-lg text-white bg-main text-[10px]" >{{ bascet.length }}</span>
 <svg  xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#171616" fillRule="evenodd" d="M4 3.75a.75.75 0 0 0 0 1.5h1.374l1.888 10.384A.75.75 0 0 0 8 16.25h10a.75.75 0 0 0 .728-.568l2-8A.75.75 0 0 0 20 6.75H7.171l-.433-2.384A.75.75 0 0 0 6 3.75zm4.626 11l-1.182-6.5H19.04l-1.625 6.5zm2.514-4a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5zm-1.39 6.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3m5 1.5a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0" clipRule="evenodd"/></svg>
 </NuxtLink>
