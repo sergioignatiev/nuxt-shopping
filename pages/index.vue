@@ -1,6 +1,10 @@
 <template>
 
-    <IndexTheTop/>
+    <IndexTheTop
+    
+    image="/images/main.jpg"
+    loading="lazy"
+    />
   
   </template>
   

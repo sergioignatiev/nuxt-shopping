@@ -27,7 +27,9 @@
     import { storeToRefs } from 'pinia';
     const store=useProductsStore()
     const {bascet}=storeToRefs(store)
-   
+   useSeoMeta({
+    title:" Корзина"
+   })
     
 
 

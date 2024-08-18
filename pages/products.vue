@@ -94,7 +94,7 @@
   <script   setup>
   import { useProductsStore,storeToRefs } from '#imports';
   useSeoMeta({
-    title:"ВСЕ ПРОДУКТЫ"
+    title:"Все Продукты"
   })
  
  

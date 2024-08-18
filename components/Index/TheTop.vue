@@ -8,13 +8,15 @@
    <NuxtLink to='/products' class="px-[23px] w-fit mt-[26px] py-[18px] bg-gray-800 rounded-[10px] text-white">Начать Покупки</NuxtLink>
    </div>
   
-   <NuxtImg  class="h-[100vh] absolute w-[100%]"  src="linguriosa.png" alt="MAIN IMAGE"/>
+   <NuxtImg  class="h-[100vh] absolute w-[100%]"  :src="image" alt="MAIN IMAGE"/>
   
   </section>
   </template>
   
   <script  setup>
-
+const {image}=defineProps({
+  image:{type:String,default:'linguriosa.png'}
+})
 
   </script>
   

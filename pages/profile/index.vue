@@ -8,7 +8,9 @@
 </template>
 
 <script lang="ts" setup>
-
+useSeoMeta({
+  title:"Аккаунт"
+})
 </script>
 
 <style>

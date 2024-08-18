@@ -8,6 +8,12 @@
 </template>
 
 <script  setup>
+
+useSeoMeta(
+  {
+    title:"Контакты"
+  }
+)
 const width=ref('')
 const f=ref(false)
 watch(width,(w)=>{

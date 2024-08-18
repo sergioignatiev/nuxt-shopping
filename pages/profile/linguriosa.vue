@@ -8,7 +8,9 @@ age:{{ timew }}
 
 </template>
 <script>
-
+useSeoMeta({
+  title:"Linguriosa"
+})
 
 export default{
   data(){
