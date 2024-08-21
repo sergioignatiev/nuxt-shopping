@@ -4,18 +4,12 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxt/eslint"
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/icon', '@nuxt/image', '@nuxt/eslint'],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
-  runtimeConfig:{
-    dataBase:process.env.DATABASE,
-    myName:process.env.MY_NAME
-  }
+  runtimeConfig: {
+    dataBase: process.env.DATABASE,
+    myName: process.env.MY_NAME,
+  },
 })
