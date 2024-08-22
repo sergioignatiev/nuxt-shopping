@@ -1,42 +1,29 @@
 <template>
-<div class="">
- 
-age:{{ timew }}
-<button @click="increaseTimew">increaseTimew {{ doubleT }}</button>
-<h1>{{ myTest }}</h1>
-</div> 
-
+  <div >
+    <input ref="input" v-model="count" type="number">
+   <NuxtImg :src="w" alt="w"/>
+  </div>
 </template>
-<script>
-useSeoMeta({
-  title:"Linguriosa"
-})
 
-export default{
-  data(){
-    return{
-    timew:0,
-    doubleT:''
+<script setup>
+const count=ref(0)
+const input=ref(null)
+const w=ref('https://v3.woonuxt.com/.netlify/images?w=2800&h=1600&url=%2Fimages%2Fhero-4.jpg')
+onMounted(()=>{
+  input.value.focus()
+})
+watch(count,(n)=>{
+ if(n>=11){
+    w.value='https://upload.wikimedia.org/wikipedia/commons/a/a0/Catalinamicaelaspain65.jpg'
   }
-  },
-  computed:{
-    myTest(){
-      return this.timew*2
-    }
-  }, watch:{timew(t){
-    if(t>3){
-      this.doubleT='Enougn'
-      
-    }else {
-      this.doubleT='LINGIRIOSA'
-    }
+ else if(n>9){
+    w.value="linguriosa.png"
+  }else if(n<=9){
+    w.value='https://v3.woonuxt.com/.netlify/images?w=2800&h=1600&url=%2Fimages%2Fhero-4.jpg'
   }
-  },
- 
-  methods:{
-    increaseTimew(){
-      this.timew++
-    }
-  },
-}
+})
 </script>
+
+<style>
+
+</style>

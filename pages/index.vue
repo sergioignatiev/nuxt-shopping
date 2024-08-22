@@ -9,6 +9,9 @@
   </template>
   
   <script  setup>
+  useSeoMeta({
+    title:"BALD-E"
+  })
   
   </script>
   

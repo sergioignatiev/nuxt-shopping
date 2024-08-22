@@ -57,12 +57,12 @@
                     <input id="4" v-model="fiveStar" class="font-[30px]" type="radio" value=4 name="rating">
                     <IconsTheStar v-for="star in 4" :key="star" fill="orange" />
                     <IconsTheStar v-for="star in 1" :key="star" fill="grey" />
-                    <p>и выше</p>
+                    
                 </label>
 
                 <label for="5" class="flex ">
                     <input id="5" v-model="fiveStar" class="font-[30px]" type="radio" value=5 name="rating">
-                    <div class="px-3 flex items-center"><IconsTheStar v-for="star in 5" :key="star" fill="orange" />
+                    <div class=" flex items-center"><IconsTheStar v-for="star in 5" :key="star" fill="orange" />
                     <IconsTheStar v-for="star in 0" :key="star" fill="grey" />
                                       
                   </div> 
@@ -105,6 +105,7 @@
   const electronics=ref(false)
   const mens=ref(false)
   const women=ref(false)
+
   const fiveStar=ref(0)
 
   const price=ref(1000)
@@ -179,6 +180,12 @@ const filteredWomen=computed(()=>{
   input[type="radio"]{
     @apply accent-[#005489];
 
+  }
+  label[class='flex']{
+    @apply items-center gap-1
+  }
+  label[class='flex']::after{
+    content:" И Выше"
   }
   
   </style>
