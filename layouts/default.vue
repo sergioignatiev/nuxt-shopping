@@ -3,6 +3,7 @@
   <header>
 <TheNavbar/>
 </header>
+
   <slot/>
   <TheFooter/>
  </div>

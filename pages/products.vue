@@ -4,7 +4,7 @@
   
    
       
-<div class=" basis-[230px] shrink-0 ">
+<div class=" basis-[230px] shrink-0 pr-[20px]">
   
       <TheFilterWrapper :name="`Цена < ${price}$`">
         <input id="" v-model="price" class="w-full" type="range" min="0" max="1000" name="">
@@ -74,7 +74,9 @@
 
 </div>
 
-      <div class="basis-[100%] shrink-1  flex flex-wrap gap-y-10 justify-around ">
+      
+        <div class="basis-[100%] shrink-1  flex flex-wrap gap-y-10 gap-[20px] ">
+          <TransitionGroup>
      <TheCard
      v-for=" c in filtered"
      :id="c.id"
@@ -85,8 +87,9 @@
      :price='c.price'
   
      />
-     
+     </TransitionGroup>
      </div>
+      
      
     </div>
   </template>
@@ -188,4 +191,17 @@ const filteredWomen=computed(()=>{
     content:" И Выше"
   }
   
+  .v-leave-from {
+ opacity: 1;
+ 
+ 
+  }
+  .v-leave-to {
+  opacity:0;
+  filter: blur(10px);
+    
+  }
+  *{
+    transition:all 0.5s;
+  }
   </style>

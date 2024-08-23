@@ -1,10 +1,7 @@
 <template>
+
   <NuxtLayout :name="layout">
-    
-
-
-
-<main class=" min-h-[100vh]" >
+<main class=" min-h-[100vh] pb-[7em]" >
 
  <NuxtPage/>
  </main>
@@ -34,7 +31,7 @@ useSeoMeta({
 
 
 .router-link-exact-active{
-  @apply underline
+  
 }
 .page-enter-active,
 .page-leave-active {

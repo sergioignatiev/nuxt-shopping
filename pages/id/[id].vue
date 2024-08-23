@@ -4,9 +4,10 @@
     <div class="grid grid-cols-3 paddings gap-7 mt-7 ">
    
         <div class="">
-         
-  <NuxtImg class=" sm:sticky top-7 " width="100%" :src="product.image" :alt="product.title"/>
-  </div>
+         <Transition>
+  <NuxtImg  v-show="opacity" class=" sm:sticky top-7 " width="100%" :src="product.image" :alt="product.title" />
+</Transition>  
+</div>
   
   <div class="">
     <h1 class="text-[30px] font-extrabold">{{ product.title }}</h1>
@@ -51,9 +52,33 @@
   useSeoMeta({
     title:`${product.value.title}`
   })
-  
+  const opacity=ref(false)
+  onMounted(()=>{
+opacity.value=true
+  })
+ 
   </script>
   
-  <style>
-  
+  <style scoped>
+    .v-enter-from {
+    opacity: 0;
+    height:80%;
+    translate: -10px 0;
+  }
+  .v-enter-to {
+    opacity: 1;
+    translate: 0 0;
+    height:100%;
+  }
+  .v-leave-from {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .v-leave-to {
+    opacity: 0;
+    translate: 10px 0;
+  }
+  img{
+    transition: all 1s;
+  }
   </style>

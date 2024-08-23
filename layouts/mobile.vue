@@ -1,10 +1,8 @@
 <template>
-  <div class="">
-    <TheMobileNavbar/>
-    <div class="pt-[5em]">
-    <slot/>
-    </div>
-  </div>
+<div class="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
+  <TheFooter/>
+</div>
 </template>
 
 <script  setup>
