@@ -1,10 +1,10 @@
 <template>
  
-    <div class="paddings  flex py-3 ">
+    <div class="paddings flex   py-3 ">
   
    
       
-<div class=" basis-[230px] shrink-0 pr-[20px]">
+<div class=" basis-[230px] shrink-0 pr-[20px] ">
   
       <TheFilterWrapper :name="`Цена < ${price}$`">
         <input id="" v-model="price" class="w-full" type="range" min="0" max="1000" name="">

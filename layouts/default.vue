@@ -1,7 +1,7 @@
 <template>
- <div class="bg-[#e6e6e6]">
+ <div class="bg-[#e6e6e6] ">
   <header>
-<TheNavbar/>
+<TheNavbar />
 </header>
 
   <slot/>
