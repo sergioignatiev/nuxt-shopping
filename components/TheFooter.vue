@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white paddings color-main">
+  <footer class="bg-white paddings ">
     <div class=" py-[92px] flex lg:flex-row flex-col justify-between gap-10 border-b-[1px] border-grey-300">
 
       <div class="block lg:basis-[444px] lg:mr-[241px]">
