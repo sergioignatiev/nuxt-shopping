@@ -31,7 +31,8 @@ useSeoMeta({
 
 
 .router-link-exact-active{
-  
+  color:#005489;
+  @apply font-semibold
 }
 .page-enter-active,
 .page-leave-active {

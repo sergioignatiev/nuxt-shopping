@@ -1,6 +1,10 @@
 @import '/assets/fonts/stylesheet.css';
 * {
   font-family: 'HelveticaNeueCyr', monospace;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding:0;
+  margin:0;
 }
 .paddings {
   @apply 2xl:px-[280px] px-5;
