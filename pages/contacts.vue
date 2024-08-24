@@ -13,7 +13,7 @@
   <div class="ml-[5px] mt-[11px]  text-black text-sm font-normal ">{{ product.title }}</div>
 
   
-  <div class="ml-[5px] mt-[13px]  text-black text-sm ">$50.00</div>
+  <div class="ml-[5px] mt-[13px]  text-black text-sm ">${{ product.price }}</div>
 </div>
   </div>
 </template>

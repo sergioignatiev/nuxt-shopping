@@ -1,38 +1,29 @@
 <template>
-
-  <NuxtLink :to="`/id/${id}`" class="  rounded-sm w-[210px] flex flex-col justify-start ">
     
-    <div class="flex   bg-white rounded-lg  p-4">
-        <div class="w-[210px] h-[280px]">
-    <NuxtImg class="w-full max-h-full" :src="image" :alt="title"/>
+     
+      <NuxtLink :to="`/id/${id}`" class="w-[210px] flex flex-col justify-between">
+<div class="flex flex-col justify-between">
+    <div class="w-[210px] h-[280px] p-1  left-0 top-0  rounded-[10px] overflow-hidden bg-white flex justify-center items-center">
+      <NuxtImg class=" w-full max-h-full" :src="image"/>
     </div>
+
+    <div class="flex items-center mt-[8px] ">
+      <TheStar v-for="star in rating" :key="star"  fill="orange"/>
+      <TheStar v-for="star in 5-rating" :key="star"  fill="#d1d5db"/>
+    <div class="text-black text-sm font-normal ">({{ rating }})</div>
     </div>
 
-
-    <div class="flex flex-col justify-between items-between">
-
-        <div class="flex items-center">
-   <div v-for="i in Math.floor(rating)" :key="i+1">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="orange" d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937l-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39l3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36z"/></svg>
-</div>
-<div v-for="i in stars-Math.floor(rating)" :key="i+1">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="grey" d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937l-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39l3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36z"/></svg>
-</div>
-({{ Math.floor(rating) }})
-
-</div>
-
-
-    <p class="text-sm">{{ title }}</p>
-
-<p class="font-bold">${{ price }}.</p>
-</div>
-
-  </NuxtLink>
-
-</template>
+    <div class="ml-[5px] mt-2 text-black text-sm font-normal ">{{ title }}</div>
+  </div>
+    
+    <div class="ml-[5px]   text-black text-sm font-bold">${{ price }}</div>
+   
+</NuxtLink>
+  
+  </template>
 
 <script lang="ts" setup>
+import TheStar from './Icons/TheStar.vue';
 defineProps({
     image:{type:String,required:true},
     title:{type:String,
@@ -43,7 +34,7 @@ defineProps({
     category:{type:String,default:''}
     
 })
-const stars=ref(5)
+
 </script>
 
 <style scoped>
