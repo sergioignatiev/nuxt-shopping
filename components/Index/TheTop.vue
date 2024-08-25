@@ -1,5 +1,5 @@
 <template>
-    <section class="relative bg-red-300 flex items-center sm:h-[100vh] h-[70vh]">
+    <section class="relative flex items-center sm:h-[100vh] h-[70vh]">
   
   <div class="paddings bg-none h-full flex flex-col gap-5 justify-center z-10">
    <div class="text-black md:text-6xl text-3xl font-bold ">Новое Поступление</div>

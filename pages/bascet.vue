@@ -2,7 +2,10 @@
   
     <div class="paddings">
      
-      <div v-if="bascet.length===0" class="text-[30px] pt-5">Корзина Пуста </div>
+      <div v-if="bascet.length===0" class="text-[30px] pt-5">
+        <p>Корзина Пуста</p>
+      <NuxtLink class="px-3 py-2 rounded-md bg-main text-sm text-white" to="/products">Перейти к покупкам</NuxtLink>
+      </div>
       <div v-else class="flex flex-wrap gap-3 py-3 relative" >
          
       <div v-for="b in bascet" :key="b.id">

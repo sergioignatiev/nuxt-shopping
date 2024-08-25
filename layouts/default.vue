@@ -2,7 +2,7 @@
  <div class="bg-[#e6e6e6] ">
 
 
-
+<TheNavbar/>
 
   <slot/>
   <TheFooter/>
@@ -10,7 +10,8 @@
 </template>
 
 <script  setup>
-
+import { useRoute } from '#app';
+const route=useRoute()
 </script>
 
 <style>
