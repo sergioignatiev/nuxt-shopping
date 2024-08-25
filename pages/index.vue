@@ -4,9 +4,9 @@
     image="https://v3.woonuxt.com/.netlify/images?w=2800&h=1600&url=%2Fimages%2Fhero-4.jpg"
     />
 
-    <div class="flex justify-between items-center py-[50px] paddings">
+    <div class="flex flex-wrap justify-between  items-center py-[50px] paddings">
    
-    <NuxtImg v-for="n in images" :key="n.id" :style="{height:`${size(n.big)}`}"   :src="n.path"/>
+    <NuxtImg v-for="n in images" :key="n.id" class="mt-5 md:mt-0" :style="{height:`${size(n.big)}`}"   :src="n.path"/>
   </div>
 
   <div class="paddings">
