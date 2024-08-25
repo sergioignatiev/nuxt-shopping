@@ -185,9 +185,9 @@ const filteredWomen=computed(()=>{
 
   }
   label[class='flex']{
-    @apply items-center gap-1
+    @apply items-center 
   }
-  label[class='flex']::after{
+  label[class='flex']:not(:last-child):after{
     content:" И Выше"
   }
   

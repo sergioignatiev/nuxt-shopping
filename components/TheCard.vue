@@ -1,9 +1,9 @@
 <template>
     
      
-      <NuxtLink :to="`/id/${id}`" class="w-[210px] max-w-[40vw] flex flex-col justify-between">
-<div class="flex flex-col justify-between">
-    <div class="w-[210px] h-[200px] sm:h-[280px] p-1  left-0 top-0  rounded-[10px] overflow-hidden bg-white flex justify-center items-center">
+      <NuxtLink :to="`/id/${id}`" class="w-[210px] max-w-[40vw] flex flex-col justify-between max-h-[400px]">
+<div class="flex flex-col justify-between ">
+    <div class="w-[210px] h-[200px] sm:h-[280px]   left-0 top-0  rounded-[10px] overflow-hidden bg-white flex justify-center items-center">
       <NuxtImg class=" w-full max-h-full" :src="image"/>
     </div>
 
