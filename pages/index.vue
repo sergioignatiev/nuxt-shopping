@@ -48,13 +48,14 @@ const {products}=storeToRefs(useProductsStore())
     title:"BALD-E"
   })
 
+
   const images=ref([{
     id:1,path:'/images/index/index1.png',alt:"ALT",big:true},
   {id:2,path:'/images/index/index5.png',alt:"ALT",big:true},
   {id:3,path:'/images/index/index3.png',alt:"ALT"},
   {id:4,path:'/images/index/index4.png',alt:"ALT"},
-  {id:5,path:'/images/index/index6.png',alt:"ALT"},
-  {id:6,path:'/images/index/index2.png',alt:"ALT"},
+  {id:5,path:'/images/index/index2.png',alt:"ALT"},
+  {id:6,path:'/images/index/index6.png',alt:"ALT"},
   ])
 
   function size(z){
