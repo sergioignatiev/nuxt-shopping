@@ -3,7 +3,7 @@
     <div class=" py-[92px] flex lg:flex-row flex-col justify-between gap-10 border-b-[1px] border-grey-300">
 
       <div class="block lg:basis-[444px] lg:mr-[241px]">
-<NuxtImg class="w-[101px] h-[30.28px]" src="/logo2.png"/>
+<NuxtImg class="w-[101px] h-[30.28px]" src="/logo2.png" alt="logo"/>
 <div class="  text-sm font-normal pt-[22px]">
  <p> Данный магазин создан Игнатьевым Сергеем исключительно для учебных целей. Не преддназначен для коммерческого использования. 
   </p>
