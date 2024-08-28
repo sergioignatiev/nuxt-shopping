@@ -11,13 +11,8 @@
       <div v-for="b in bascet" :key="b.id">
   <button class="rounded-lg px-4 py-1 bg-red-800 text-white absolute" @click="b.bascet=false">DELETE</button>
          <TheCard 
-         :id="b.id"
-         :key="b.id"
-         :title="b.title"
-         :image="b.image"
-         :category="b.category"
-         :rating="b.rating.rate"
-         :price="b.price"
+      :card="b"
+         
          />
       </div>
     </div>

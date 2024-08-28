@@ -4,6 +4,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     { id: 2, label: 'Все Продукты', link: '/products' },
     { id: 3, label: 'Категории', link: '/categories' },
     { id: 4, label: 'Контакты', link: '/contacts' },
+  
   ])
 
   return { navigation }

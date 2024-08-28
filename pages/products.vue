@@ -79,12 +79,8 @@
           <TransitionGroup>
      <TheCard
      v-for=" c in filtered"
-     :id="c.id"
+     :card="c"
      :key="c.id"
-     :title="c.title"
-     :image="c.image"
-     :rating="c.rating.rate"
-     :price='c.price'
   
      />
      </TransitionGroup>

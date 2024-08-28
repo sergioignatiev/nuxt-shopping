@@ -15,12 +15,9 @@
    
 <TheCard
 v-for="c in products.slice(0,6)" 
-:id="c.id"
-     :key="c.id"
-     :title="c.title"
-     :image="c.image"
-     :rating="c.rating.rate"
-     :price='c.price'
+:key="c.id"
+     :card="c"
+     
 
 
 
