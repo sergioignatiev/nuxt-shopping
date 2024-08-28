@@ -11,29 +11,15 @@
         </TheFilterWrapper>
 
         <TheFilterWrapper name="Категории">
-            <div class="flex gap-4 " >
-          <input id="women" v-model="women" type="checkbox"  name="categories" value="women">
-          <label for="women">Женская Одежда</label>
+
+            <div v-for="c in categories" :key='c'  class="flex gap-4">
+          <input :id="c"  type="checkbox"  name="categories" @click="filter(c)">
+          <label :for="c">{{c}}</label>
         
       </div>
 
-        <div class="flex gap-4 " >
-          <input id="jewelery" v-model="jewelery" type="checkbox"  name="categories" value="jewelery">
-          <label for="jewelery">Украшения</label>
-        
-      </div>
-  
-      <div class="flex gap-4">
-          <input id="electronics" v-model="electronics" type="checkbox"  name="categories" value="electronics">
-        <label for="electronics">Электроника</label>
-        
-      </div>
-      <div class="flex gap-4">
-          <input id="mens" v-model="mens" class="accent-[red]" type="checkbox"  name="categories" value="mens">
-        <label for="mens">Мужская одежда</label>
-        
-      </div>
   </TheFilterWrapper>
+
   <TheFilterWrapper name="Рейтинг">
             
 
@@ -68,7 +54,7 @@
                   </div> 
                 </label>
    
-                <button class="bg-main px-5 py-2 rounded-lg text-white" @click="fiveStar=0">Любой Рейтинг</button>
+                <button class="bg-main px-5 py-2 mt-5 rounded-lg text-white" @click="fiveStar=0">Любой Рейтинг</button>
 </TheFilterWrapper>
  
 
@@ -76,11 +62,12 @@
 
       
         <div class="basis-[100%] shrink-1  flex flex-wrap gap-y-10 gap-[20px] ">
+         
           <TransitionGroup>
      <TheCard
-     v-for=" c in filtered"
-     :card="c"
+     v-for=" c in changePrice"
      :key="c.id"
+     :card="c"
   
      />
      </TransitionGroup>
@@ -98,68 +85,45 @@
  
  
   const store=useProductsStore()
-  const {products}=storeToRefs(store)
-  
-  const jewelery=ref(false)
-  const electronics=ref(false)
-  const mens=ref(false)
-  const women=ref(false)
-
+  const {products,categories}=storeToRefs(store)
+  const filtered=ref([])
   const fiveStar=ref(0)
+  const price=ref(100)
+function ftg(){
+ const arr=[]
+const ctg=filtered.value.map(x=>products.value.filter(s=>s.category==x))
+for(let i=0;i<ctg.length; i++){
+  for (let j=0;j<ctg[i].length;j++){
+arr.push(ctg[i][j])
+  }
+}
+if(filtered.value.length==0){
+  return products.value
+}else{
+  return [...arr].reverse()
+}
+}
 
-  const price=ref(1000)
 
-  const stars=computed(()=>{
-    if(fiveStar.value){
-    return products.value.filter(f=>f.rating.rate>fiveStar.value-1)
-  }else{return products.value}
-
-})
-
-const product=computed(()=>{
-    return stars.value.filter(f=>f.price<price.value)
-})
-
-const filteredWomen=computed(()=>{
-    if(women.value===false){
-      return []
-    }else{
-      return product.value.filter(j=>j.category==='Женская Одежда')
-    }
-  })
-
-  const filteredJewelery=computed(()=>{
-    if(jewelery.value===false){
-      return []
-    }else{
-      return product.value.filter(j=>j.category==='Украшения')
-    }
-  })
-  const filteredElectronics=computed(()=>{
-    if(electronics.value===false){
-      return []
-    }else{
-      return  product.value.filter(j=>j.category==='Электроника')
-    }
-  })
-  const filteredMens=computed(()=>{
-    if(mens.value===false){
-      return []
-    }else{
-      return  product.value.filter(j=>j.category==='Мужская Одежда')
-    }
-  })
+function filter(x){
+  if(filtered.value.includes(x)){
+    filtered.value.splice(filtered.value.indexOf(x),1)
+  }else{
+    filtered.value.push(x)
+  }
+}
   
-  const filtered=computed(()=>{
-    if(electronics.value==false&&jewelery.value===false&&mens.value===false&&women.value===false){
-      return [...product.value]
-      }
-      else{
-        return [...filteredJewelery.value,...filteredElectronics.value,...filteredMens.value,...filteredWomen.value]
-      }
+
   
-  
+  const rating=computed(()=>{
+    return ftg().filter(i=>i.rating.rate>=fiveStar.value)
   })
+
+ 
+  const changePrice=computed(()=>{
+    return rating.value.filter(i=>i.price<price.value)
+  })
+
 
   
   </script>
@@ -173,7 +137,7 @@ const filteredWomen=computed(()=>{
     @apply text-sm
   }
   label.flex{
-    @apply py-3  
+    @apply py-1
 
   }
   input[type="radio"]{
