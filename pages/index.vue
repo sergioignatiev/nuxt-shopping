@@ -5,25 +5,17 @@
     />
 
     <div class="flex flex-wrap justify-between  items-center py-[50px] paddings">
-   
     <NuxtImg v-for="n in images" :key="n.id" class="mt-5 md:mt-0" :style="{height:`${size(n.big)}`}" :alt="n.alt"   :src="n.path"/>
   </div>
+  <div class="text-black text-[22px] font-bold paddings">По Категориям</div>
+  <div class="paddings flex flex-wrap gap-2 justify-between mt-[34px]">
 
-  <div class="paddings">
-    <div class="text-black text-[22px] font-bold ">Популярные продукты</div>
-    <div class="flex flex-wrap gap-2 mt-[36px] justify-between ">
-   
-<TheCard
-v-for="c in products.slice(0,6)" 
-:key="c.id"
-     :card="c"
-     
-
-
-
-/>
-    
-    </div>
+    <TheCategoryCard
+    v-for="n in categories"
+    :key='n'
+    :card="n"
+:image="addImage(n)"
+    />
   </div>
 
   <div class="paddings flex lg:flex-row flex-col gap-2 justify-between mt-[97px]">
@@ -31,6 +23,17 @@ v-for="c in products.slice(0,6)"
     <TheSercice/>
     <TheSercice/>
   </div>
+
+  <div class="paddings">
+    <div class="text-black text-[22px] font-bold mt-[105px]">Популярные продукты</div>
+    <div class="flex flex-wrap gap-2 mt-[36px] justify-between ">
+   
+<TheCard v-for="c in products.slice(0,6)" :key="c.id" :card="c"/>
+    
+    </div>
+  </div>
+
+  
  
   </div>
   </template>
@@ -39,12 +42,15 @@ v-for="c in products.slice(0,6)"
 import { useProductsStore,storeToRefs } from '#imports';
 
   import TheSercice from '~/components/Index/TheSercice.vue';
-const {products}=storeToRefs(useProductsStore())
+const {products,categories}=storeToRefs(useProductsStore())
 
   useSeoMeta({
     title:"BALD-E"
   })
-
+ function addImage(x){
+    const fr=products.value.filter(f=>f.category===x)
+return fr[fr.length-1].image
+  }
 
   const images=ref([{
     id:1,path:'/images/index/index1.png',alt:"ALT",big:true},

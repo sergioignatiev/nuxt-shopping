@@ -88,7 +88,7 @@
   const {products,categories}=storeToRefs(store)
   const filtered=ref([])
   const fiveStar=ref(0)
-  const price=ref(100)
+  const price=ref(1000)
 function ftg(){
  const arr=[]
 const ctg=filtered.value.map(x=>products.value.filter(s=>s.category==x))
