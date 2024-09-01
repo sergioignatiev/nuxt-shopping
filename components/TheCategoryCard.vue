@@ -13,7 +13,7 @@
 
 <script  setup>
 const {card,image}=defineProps({
-    card:{type:Object,required:true},
+    card:{type:String,required:true},
     image:{type:String,required:true}
 })
 </script>

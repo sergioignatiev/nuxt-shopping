@@ -1,6 +1,7 @@
 <template>
 <div class="">
     <IndexTheTop
+     
     image="https://v3.woonuxt.com/.netlify/images?w=2800&h=1600&url=%2Fimages%2Fhero-4.jpg"
     />
 
@@ -8,10 +9,11 @@
     <NuxtImg v-for="n in images" :key="n.id" class="mt-5 md:mt-0" :style="{height:`${size(n.big)}`}" :alt="n.alt"   :src="n.path"/>
   </div>
   <div class="text-black text-[22px] font-bold paddings">По Категориям</div>
-  <div class="paddings flex flex-wrap gap-2 justify-between mt-[34px]">
+  <div class="paddings flex flex-wrap gap-2 justify-start mt-[34px]">
 
     <TheCategoryCard
     v-for="n in categories"
+
     :key='n'
     :card="n"
 :image="addImage(n)"

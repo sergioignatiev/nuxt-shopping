@@ -1,5 +1,6 @@
 <template>
  <div class="flex flex-wrap">
+    
   <div v-for="p in products" :key="p.id" class="">{{ p.id }}</div>
  </div>
 </template>

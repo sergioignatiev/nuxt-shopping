@@ -22,7 +22,7 @@
   
   </template>
 
-<script lang="ts" setup>
+<script setup>
 import TheStar from './Icons/TheStar.vue';
 defineProps({card:{type:Object,required:true}})
 
